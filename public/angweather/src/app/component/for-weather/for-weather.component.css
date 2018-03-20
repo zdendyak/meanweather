@@ -1,0 +1,12 @@
+.chart {
+    width: 100px;
+    margin-top: 10px;
+}
+
+.hourly {
+    margin-top: 10px;
+    border-bottom: 1px solid #eee;
+}
+.tab-container {
+    margin-top: 30px
+}

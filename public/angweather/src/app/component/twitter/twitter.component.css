@@ -1,0 +1,13 @@
+.twitter-section {
+  max-height: 780px;
+  overflow-y: scroll;
+}
+
+.tweet-card {
+    /*border-bottom: 1px solid #eee;*/
+
+}
+
+.tweet-header-image {
+  background-size: cover;
+}

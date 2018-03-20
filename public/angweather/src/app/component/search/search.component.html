@@ -1,0 +1,10 @@
+<form class="search-form" (submit)="onSubmit()" novalidate>
+  <md-input-container class="full-width">
+    <input mdInput [(ngModel)]="searchStr"  name="searchStr" placeholder="Your city" minlength="2">  
+    <button mdSuffix md-icon-button><md-icon>search</md-icon></button>
+  </md-input-container>
+  
+</form>
+
+
+<p *ngIf="weather">{{data | json}}</p>

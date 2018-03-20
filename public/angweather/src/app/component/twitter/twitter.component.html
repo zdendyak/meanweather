@@ -1,0 +1,26 @@
+<div *ngIf="data" class="twitter-section">
+  <h4 class="page-header">Tweets about {{city}}</h4>
+
+  <div *ngFor="let d of data">
+    <md-card class="tweet-card">
+      <md-card-header>
+        <img md-card-avatar src="{{d.user.profile_image_url}}">
+        <md-card-title>{{d.user.screen_name}}</md-card-title>
+        <md-card-subtitle>{{d.created_at}}</md-card-subtitle>
+      </md-card-header>
+      <img md-card-image *ngIf="d.entities.media" src="{{d.entities.media[0].media_url}}">
+      <md-card-content>
+        <p>
+          {{d.text}}
+        </p>
+      </md-card-content>
+    </md-card>
+
+  </div>
+
+</div>
+<div *ngIf="!data || data.message" class="twitter-section">
+  <h4 class="page-header">Tweets about {{city}}</h4>
+  No tweets available
+  {{data.message}}
+</div>

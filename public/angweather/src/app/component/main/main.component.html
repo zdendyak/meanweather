@@ -1,0 +1,16 @@
+<div class="main">
+  <div class="row">
+    <app-search class="col-md-12" (search)="onSearchEvent($event)"></app-search>
+  </div>
+  <div id="main" *ngIf="city">
+    <div class="row">
+      <h2 class="main-title col-md-12">Current weather, forcast and latest news in {{city ? city :'your city'}}</h2>
+    </div>
+    <div class="row">
+      <app-cur-weather class="col-md-3" [city]="city"></app-cur-weather>
+      <app-for-weather class="col-md-6" [city]="city"></app-for-weather>
+      <app-twitter class="col-md-3" [city]="city"></app-twitter>
+    </div>
+  </div>
+  
+</div>

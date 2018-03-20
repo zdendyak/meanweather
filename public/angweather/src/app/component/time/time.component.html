@@ -1,0 +1,23 @@
+<div class="row hourly-data">
+  <div class="col-sm-2">
+    <p>{{ data.dt | date: "dd/MMM/yyyy HH:mm"}}</p>
+  </div>
+  <div class="col-sm-1">
+    <img src="../../../assets/weather-icons/{{data.icon}}.png" alt="Weather">
+  </div>
+  <div class="col-sm-8 col-sm-offset-1">
+    <div>
+      <div class="row">
+        <div class="col-sm-4"><span class="badge">{{data.temp}} °C</span></div> 
+        <div class="col-sm-4">{{data.description}}</div>
+        <div class="col-sm-4">{{data.wind.speed}} m/s</div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">humidity: {{data.humidity}} %</div>
+        <div class="col-sm-4">clouds: {{data.clouds}} %</div>
+        <div class="col-sm-4">{{data.pressure}} hpa</div>
+      </div>
+       <!--{{ data | json }}-->
+    </div>
+  </div>
+</div>

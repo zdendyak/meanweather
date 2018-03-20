@@ -1,0 +1,28 @@
+{
+  "name": "mean-weather-app",
+  "version": "1.0.0",
+  "description": "node angular express chartjs weather",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "\u0016node",
+    "angular",
+    "express",
+    "chartjs",
+    "weather"
+  ],
+  "author": "zdendyak",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cors": "^2.8.4",
+    "express": "^4.15.3",
+    "http": "0.0.0",
+    "morgan": "^1.8.2",
+    "request": "^2.81.0",
+    "twitter": "^1.7.1"
+  }
+}

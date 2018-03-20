@@ -1,0 +1,21 @@
+<div *ngIf="data && data.name">
+  <h3 class="page-header">Weather forecast in {{data.name}}</h3>
+  <md-tab-group>
+    <md-tab label="Chart">
+      <div class="tab-container">
+        <app-chart class="chart" [data]="data"></app-chart>
+      </div>
+    </md-tab>
+    <md-tab label="Hourly">
+      <div class="tab-container">
+        <div class="hourly" *ngFor="let d of data.list">
+          <app-time [data]="d"></app-time>
+        </div>
+      </div>
+    </md-tab>
+  </md-tab-group>
+</div>
+<div *ngIf="!data || data.message">
+  <p>No forcast available</p>
+  <p>{{ data.message }}</p>
+</div>

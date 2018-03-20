@@ -1,0 +1,24 @@
+.main-cover {    
+    background: url('../assets/300.jpg');
+    /*background: url('https://unsplash.it/1400/300?image=583') no-repeat;*/
+    /*background-image: '../assets/300.jpg';*/
+    height: 300px;
+    width: 100%;
+    padding-top: 70px;
+    padding-bottom: 10px;
+    margin-top: 35px;
+}
+
+.main-cover h1 {
+    color: #fff;
+    font-size: 3em;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.main-cover h3 {
+    /*color: #3f51b5;*/
+    color: #fff;
+    text-align: center;
+    font-style: italic;
+}

@@ -1,0 +1,46 @@
+<div *ngIf="data && data.name">
+  <h3 style="font-weight: bold">Weather in {{data.name}}, {{data.country}}</h3>
+  <h4 style="font-weight: bold">
+    <img src="../../../assets/weather-icons/{{data.icon}}.png" alt="Weather" width="50" height="50"> {{data.temp}} °C
+  </h4>
+  <p>{{data.description}}</p>
+  <p>{{data.dt | date:'H:mm d MMM'}}</p>
+
+  <table class="table table-striped table-bordered table-condensed">
+    <tbody>
+      <tr>
+        <td>Wind</td>
+        <td>{{data.wind.speed + ' m/s, (' + data.wind.deg +'°)'}}</td>
+      </tr>
+      <tr>
+        <td>Cloudiness</td>
+        <td>{{data.clouds}} %</td>
+      </tr>
+      <tr>
+        <td>Pressure</td>
+        <td>{{data.pressure }} hpa</td>
+      </tr>
+      <tr>
+        <td>Humidity</td>
+        <td>{{data.humidity}} %'</td>
+      </tr>
+      <tr>
+        <td>Sunrise</td>
+        <td>{{data.sunrise | date:'H:mm'}}</td>
+      </tr>
+      <tr>
+        <td>Sunset</td>
+        <td>{{data.sunset | date:'H:mm'}}</td>
+      </tr>
+      <tr>
+        <td>Geo coords</td>
+        <td>[{{data.coord.lon}},{{data.coord.lat}}]</td>
+      </tr>
+    </tbody>
+
+  </table>
+</div>
+<div *ngIf="!data || data.message">
+  <p>No current weather available</p>
+  <p>{{ data.message }}</p>
+</div>
